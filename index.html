@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DiuSpot</title>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="">
+  <meta name="author" content="Dharmesh pandey">
+  <!-- freefliks@gmail.com -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="DiuSpot developer page">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <!-- Google font -->
+  <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<style>
+		body{
+			margin:0;
+			padding: 0;
+			height:1000px;
+			background: #fff;
+		}
+		#topnav{
+			width: 100%;
+			height: 50px;
+			background: rgba(255, 255, 255, 0.98);
+			position: fixed;
+			box-shadow: 0 0 5px 2px rgba(0,0,0,.22);
+			transition: .2s;
+			z-index: 999;
+		}
+		#topnav ul{
+			margin: 0;
+			padding: 0;
+			float: right;
+			margin-right: 50px;
+		}
+		#topnav ul li{
+			float: left;
+			list-style: none;
+			margin-left: 10px;
+			line-height: 35px;
+		}
+		#topnav ul li a{
+			text-decoration: none;
+			color: #444;
+			font-size: 15px;
+			padding-left:8px;
+			padding-right: 8px;
+			border-radius: 2px;
+			font-family: Poppins;
+			height: 35px;
+			display: block;
+			margin-top: 7.33px;
+		}
+		#topnav ul li a:hover{
+			background: #f3f3f3;
+		}
+		#topnav ul li a.call2action{
+			color: green;
+		}
+		.toptxt{
+			line-height: 50px;
+			padding-left: 50px;
+			font-family: Poppins;
+			font-size: 17px;
+			color: #444;
+			float: left;
+			font-weight:bold;
+			letter-spacing: 1px;
+		}
+		.toptxt i{
+			color: green;
+			font-size: 20px;
+		}
+		.more{
+			width: 130px;
+			background: #fff;
+			overflow: hidden;
+			display: none;
+			transition: .2s;
+			margin-right: -50px;
+		}
+		.more li{
+			background: red;
+			display: block;
+		}
+		.more p a{
+			height: 20px;
+			display: block;
+			background: #fff;
+			padding-left: 10px;
+			margin-left: 2px;
+			margin-right: 2px;
+			margin-top: -10px;
+			margin-top: 0px;
+		}
+		.more p a:hover{
+			background: #f3f3f3;
+		}
+		#topnav ul li:hover .more{
+			display: block;
+			box-shadow: 0 0 5px 2px rgba(0,0,0,.11);
+		}
+		#landing{
+			width:100%;
+			height: 550px;
+			background: url(adult.jpg);
+			background-size: cover;
+			background-position: right 30px;
+			background-repeat: no-repeat;
+			background-color: #ebedec;
+		}
+	
+		.head{
+			padding-top: 100px;
+			font-size: 47px;
+			color: #444;
+			padding-left: 100px;
+			font-family:Poppins;
+		}
+		.head h1{
+			font-size: 47px;
+			line-height: 55px;
+		}
+		.sub{
+			font-size: 22px;
+			color: #444;
+			padding-left:100px;
+			font-family: Muli;
+		}
+		.sub h3{
+			font-weight: normal;
+			font-size: 22px;
+			line-height: 33px;
+			margin-top: -10px;
+		}
+		#con{
+			width:100%;
+			height:470px;
+			background:#f9f9f9;
+		}
+		#landing a{
+			margin-left:100px;
+			margin-top:5px;
+		}
+		.row #box{
+			width: 100%;
+			height: 250px;
+			background: #fff;
+			box-shadow: 0px 6px 35px 0px rgba(0,0,0,0.1);
+			transition: .3s;
+		}
+		#blogbox{
+			width: 100%;
+			height: 260px;
+			background: #fff;
+			box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+			border:1px solid #e6e6e6;
+			transition: .3s;
+			border-radius: 8px;
+			margin-top: 15px;
+		}
+		#blogbox:hover{
+			box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+		}
+		.row #box:hover{
+			box-shadow: 0 10px 20px rgba(189,189,189,.19), 0 6px 6px rgba(189,189,189,.23);
+			transform: translateY(-3px)
+		}
+		
+		#abtmin{
+    color:#2e88e2; font-size: 40px; font-weight:bold; font-family: Muli; margin-top: 20px;
+}
+
+
+#servbox{
+    width: 100%;
+    margin-left: 1%;
+    background: #fff;
+    border:1px solid #e0e1e1;
+    height: 250px;
+    transition: .2s;
+    margin-top: 20px;
+    box-shadow: 0px 6px 35px 0px rgba(0,0,0,0.1);
+}
+#servbox:hover{
+    box-shadow:0 10px 20px rgba(189,189,189,.19),0 6px 6px rgba(189,189,189,.23);
+    transform: translateY(-3px);
+}
+.servtxt{
+    font-size: 19px;
+}
+.servdes{
+    font-size: 16px;
+    color:gray;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#callback{
+	margin-top: -10px;
+}
+#callbox{
+	width: 100%; 
+	height: 35px; 
+	margin-top: 20px; 
+	padding-left: 10px; 
+	color: gray; 
+	font-size: 18px;
+	outline: none;
+}
+.menubar{
+	display: none;
+	padding-right: 20px;
+	line-height: 50px;
+	color: #444;
+	font-size: 22px;
+	float: right;
+}
+
+
+		@media screen and (max-width: 800px){
+			#topnav ul {
+				display: none;
+			}
+			.menubar{
+				display: block;
+			}
+			.toptxt{
+			padding-left: 20px;
+			}
+			#landing{
+			width:100%;
+			height: 580px;
+			background: url(adult.jpg);
+			background-size: cover;
+			background-position: left ;
+			background-repeat: no-repeat;
+			background-color: #ebedec;
+			}
+			.head{
+			padding-top: 80px;
+			color: #444;
+			padding-left: 15px;
+			font-family:Poppins;
+			}
+			.head h1{
+				font-size: 40px;
+				line-height: 50px;
+			}
+			.sub{
+				padding-top: 5px;
+				font-size: 20px;
+				color: #444;
+				padding-left:15px;
+				font-family: Muli;
+			}
+			.sub h3{
+				font-size: 21px;
+				line-height: 32px;
+			}
+			#con{
+				width:100%;
+				height:100%;
+				background:#f9f9f9;
+			}
+			#landing a{
+				margin-left:15px;
+				margin-top:15px;
+			}
+			#callback{
+				margin-top: -30px;
+			}
+			#callbox{
+				height: 40px;
+			}
+
+		}
+	</style>
+	    <script>
+
+    function onScroll(){
+    
+    var el = document.getElementById('topnav');
+    
+    if( document.body.scrollTop || document.documentElement.scrollTop > 30 ){
+    
+    el.style.boxShadow = "0 0 5px 2px rgba(0,0,0,.33)";
+  
+    }
+    else{
+    el.style.boxShadow = "0 0 5px 2px rgba(0,0,0,.22)";
+    }
+    
+    }
+    </script>
+</head>
+<body onscroll="onScroll()">
+	<div id="topnav">
+		<div class="toptxt">
+			<i class="far fa-lightbulb"></i> DiuSpot 
+		</div>
+		<ul>
+			<li><a href="">Home</a></li>
+			<li><a href="">Business</a></li>
+			<li><a href="">Website</a></li>
+			<li><a href="">Application</a></li>
+			<li><a href="" class="call2action">DiuSpot <i class="fas fa-chevron-down"></i></a>
+				<div class="more">
+					<p style="margin-top:-5px;"><a href="">About</a></p>
+					<p style="margin-top:-15px;"><a href="">Services</a></p>
+					<p style="margin-top:-15px;"><a href="">Products</a></p>
+					<p style="margin-top:-15px;"><a href="">Blog</a></p>
+					<p style="margin-top:-15px;"><a href="">Founders</a></p>
+					<p style="margin-top:-15px;"><a href="">Contact</a></p>
+				</div>
+			</li>
+		</ul>
+
+		<div class="menubar"><i class="fas fa-bars"></i></div>
+	</div>
+
+	<div id="landing">
+		<div class="datas">
+		<div class="head"><h1>Start and grow your <br>Business with us</h1></div>
+		<div class="sub"><h3>DiuSpot Helps you to grow your business <br>And provide Best online services..</h3></div>
+		<a href="click" class="btn waves-effect waves-light #388e3c green darken-2">Get Started</a>
+		</div>
+	</div>
+
+	<section>
+		<div class="container" style="padding-top: 100px;">
+			<div class="row">
+				<div class="col l6 s12">
+					<img src="plant.jpg" style="width: 100%;">
+				</div>
+				<div class="col l6 s12">
+					<div id="abtsec" style="font-size: 32px; font-family: Poppins;">How we help you to Grow your Business ?</div>
+					<br>
+					<div id="abtsec" style="font-size: 20px; margin-bottom: 8px;"><i class="far fa-check-circle" style="color: green;"></i> Guiding for Rapid Growth..</div>
+					<div id="abtsec" style="font-size: 20px; margin-bottom: 8px;"><i class="far fa-check-circle" style="color: green;"></i> A well designed website..</div>
+					<div id="abtsec" style="font-size: 20px; margin-bottom: 8px;"><i class="far fa-check-circle" style="color: green;"></i> Managing social media..</div>
+					<div id="abtsec" style="font-size: 20px; margin-bottom: 20px;"><i class="far fa-check-circle" style="color: green;"></i> Promoting business online..</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div id="con" style="margin-top: 70px;">
+		<div class="container" style="padding-top: 10px;">
+			<center>
+				<p style="font-size: 32px;"> Our Seriveces</p>
+			</center>
+			<div class="row">
+				<center>
+                       <div class="col s12 l4" data-aos="zoom-in-up">
+                         <div id="servbox" style="border-bottom: 3px solid #4f5d73;">
+                           <div id="serveloc">
+                             <img src="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/rocket-512.png" style="width: 80px; margin-top: 22px;">
+                             </div>
+                             <div class="servtxt" style="color:#444;">Startup Consultant</div>
+                             <div class="servdes">We help new startup to born and build their empire..</div>
+                         </div>
+                       </div>
+                       <div class="col s12 l4" data-aos="zoom-in-up">
+                         <div id="servbox" style="border-bottom: 3px solid #77b3d4;">
+                           <div id="serveloc">
+                             <img src="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/browser-512.png" style="width: 80px; margin-top: 22px;">
+                             </div>
+                             <div class="servtxt" style="color:#444;">Tech solution</div>
+                             <div class="servdes">We provide tech solution like website & Application..</div>
+                         </div>
+                       </div>
+                      <div class="col s12 l4" data-aos="zoom-in-up">
+                         <div id="servbox" style="border-bottom: 3px solid #76c2af;">
+                           <div id="serveloc">
+                             <img src="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/tools-512.png" style="width: 80px; margin-top: 22px;">
+                             </div>
+                             <div class="servtxt" style="color:#444;">Marketing service</div>
+                             <div class="servdes">We also provide SEO and other marketing services..</div>
+                         </div>
+                       </div>
+                     </center>
+			</div>
+		</div>
+	</div>
+
+	<section style="width: 100%; padding-bottom: 30px;">
+		<div class="container" style="padding-top: 2px;">
+			<center>
+				<p style="font-size: 32px;">Request a call</p>
+			</center>
+			<div class="row" id="callback">
+			<center>					
+				<div class="col l5 s12">
+					<input type="" name="" placeholder="Email or Name.." id="callbox">
+				</div>
+				<div class="col l5 s12">
+					<input type="" name="" placeholder="Phone number.." id="callbox">
+				</div>
+				<div class="col l2 s12">
+				<a href="click" class="btn waves-effect waves-light #388e3c green darken-2" style="margin-top: 20px;">
+				REQUEST CALL</a>
+				</div>
+			</center>
+			</div>
+		</div>
+	</section>
+
+	<section style="width: 100%; height: 250px; background: gray;"> </section>
+
+
+	<div id="con" style="margin-top: 0px; background: #fff;">
+		<div class="container" style="padding-top: 20px;">
+			<center>
+				<p style="font-size: 32px;">Blog and stories</p>
+			</center>
+			<div class="row">
+				<div class="col l4 s12">
+					<div id="blogbox"></div>
+				</div>
+				<div class="col l4 s12">
+					<div id="blogbox"></div>
+				</div>
+				<div class="col l4 s12">
+					<div id="blogbox"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="videos" style="width: 100%; height: 300px; background: #f9f9f9;">
+		
+	</div>
+
+	 <!-- contact form -->
+          <section class="section container" id="contact" style="margin-top: 50px;">
+            <div class="row">
+              <div class="col s12 l5">
+              	<center>                
+              		<img src="contact.jpg" alt="" class="responsive-img materialboxed" style="position:static; width:100%; margin-top: 10px;" id="hide_it">
+              	</center>
+              </div>
+              <div class="col s12 l5 offset-l2">
+                  <h4 style="color:#444; margin-bottom: 20px;">Get in Touch</h4>
+                <form>
+                  <div class="input-field">
+                    <i class="material-icons prefix">Name</i>
+                    <input type="text" id="text">
+                    <label for="text">Your Name</label>
+                  </div>
+                  <div class="input-field">
+                    <i class="material-icons prefix">email</i>
+                    <input type="email" id="email">
+                    <label for="email">Your Email</label>
+                  </div>
+                  <div class="input-field">
+                    <i class="material-icons prefix">message</i>
+                    <textarea id="message" class="materialize-textarea" cols="20" rows="20"></textarea>
+                    <label for="message">Your Message</label>
+                  </div>
+                  <div class="input-field">
+                    <p>
+                      <label>
+                        <input type="checkbox">
+                        <span>Important messege</span>
+                      </label>
+                    </p>
+                  </div>
+                  <div class="input-field center">
+                    <button class="btn green">Send <i class="material-icons right">exit_to_app</i></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+
+  <section style="width: 100%; height:50px; background:#444; color: #fff; line-height: 50px; text-align: center; bottom:0;">
+  	DiuSpot Consulting Group
+  </section>
+
+	<!-- Compiled and minified JavaScript -->
+          <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+          <script>
+            $(document).ready(function(){
+              $('.sidenav').sidenav();
+              $('.materialboxed').materialbox();
+              $('.parallax').parallax();
+              $('.tabs').tabs();
+              $('.datepicker').datepicker({
+                disableWeekends: true,
+                yearRange: 1
+              });
+            });
+          </script>
+</body>
+</html>
